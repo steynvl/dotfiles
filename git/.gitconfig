@@ -1,0 +1,16 @@
+[user]
+	name = Steyn van Litsenborgh
+	email = steyn.van.l@gmail.com
+[alias]
+	s = status -sb
+	ll = log --oneline
+	cm = commit -m
+	d = diff
+	gl = config --global -l
+	co = checkout
+	cob = checkout -b
+	del = branch -D
+	res = reset --hard
+	pu = push -u origin HEAD
+	ba = branch -a
+	ap = add -p	
