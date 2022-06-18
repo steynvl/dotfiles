@@ -1,7 +1,6 @@
 " Don't want vi compatibility
 set nocompatible
 
-
 " ============================================================================ "
 " ================================= Plugins ================================== "
 " ============================================================================ "
@@ -26,6 +25,29 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 let g:UltiSnipsEditSplit= "vertical"
 
 call vundle#end()
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call plug#begin()
+
+" Load plugins
+" VIM enhancements
+
+" GUI enhancements
+Plug 'itchyny/lightline.vim'
+Plug 'machakann/vim-highlightedyank'
+Plug 'andymass/vim-matchup'
+
+" Syntactic language support
+Plug 'cespare/vim-toml'
+Plug 'stephpy/vim-yaml'
+Plug 'rust-lang/rust.vim'
+Plug 'rhysd/vim-clang-format'
+Plug 'fatih/vim-go'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
+call plug#end()
+
 
 " ============================================================================ "
 " =========================== File and Filesystem ============================ "
@@ -235,3 +257,5 @@ if has('terminal')
     command! -nargs=* Latex rightbelow vertical term++close latexmk -xelatex -pvc <args>
 endif
 
+" make the backspace work like in most other programs
+set backspace=indent,eol,start
